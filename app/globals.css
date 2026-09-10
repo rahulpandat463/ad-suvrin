@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* =====================================================
+   DESIGN TOKENS
+   ===================================================== */
+:root {
+  --color-bg: #050811;
+  --color-surface: #0b1120;
+  --color-surface-2: #111827;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-glow: rgba(245, 158, 11, 0.3);
+
+  --color-primary:
