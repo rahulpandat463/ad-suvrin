@@ -364,10 +364,20 @@
 @media (max-width: 900px) {
   .dashGrid { grid-template-columns: 1fr; }
   .kpiCards { grid-template-columns: repeat(3, 1fr); }
+  .section { padding: 64px 0; }
 }
 
-@media (max-width: 580px) {
-  .kpiCards { grid-template-columns: 1fr; }
+@media (max-width: 600px) {
+  .section { padding: 48px 0; }
+  .header { margin-bottom: 36px; }
+  .kpiCards { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .kpiCard { padding: 14px 10px; border-radius: 12px; }
+  .kpiNum { font-size: 1.25rem; }
+  .kpiLabel { font-size: 0.7rem; }
+}
+
+@media (max-width: 480px) {
+  .kpiCards { grid-template-columns: 1fr; gap: 10px; }
   .kpiNum { font-size: 1.4rem; }
   .chartCard, .costCard, .mesCard { padding: 16px; border-radius: 14px; }
   .costInfo { min-width: 80px; }
@@ -380,6 +390,6 @@
   .wcInfo { min-width: 65px; }
   .costLabel, .wcName { font-size: 0.72rem; }
   .costAmt, .wcStatus { font-size: 0.65rem; }
-  .section { padding: 48px 0; }
+  .section { padding: 40px 0; }
 }
 

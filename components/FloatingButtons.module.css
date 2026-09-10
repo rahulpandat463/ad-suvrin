@@ -76,12 +76,14 @@
   }
 }
 
-/* Responsive: compact icon-only circular buttons on mobile */
+/* Responsive: compact icon-only circular buttons on mobile — ek ke upar ek */
 @media (max-width: 540px) {
   .fabContainer {
-    bottom: 16px;
+    bottom: 14px;
     right: 12px;
+    flex-direction: column;
     gap: 8px;
+    z-index: 990;
   }
 
   .fabConsultation span,
@@ -91,29 +93,30 @@
 
   .fabConsultation,
   .fabWhatsApp {
-    padding: 12px;
+    padding: 10px;
     border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
   }
 }
 
 @media (max-width: 360px) {
   .fabContainer {
-    bottom: 12px;
+    bottom: 10px;
     right: 8px;
+    gap: 6px;
   }
   .fabConsultation,
   .fabWhatsApp {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    padding: 10px;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 8px;
   }
 }
 

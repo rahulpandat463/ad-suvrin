@@ -82,7 +82,11 @@
 
 @media (max-width: 800px) {
   .layout { grid-template-columns: 1fr; gap: 36px; }
-  .left { position: static; }
+  .left {
+    position: static;
+    text-align: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 600px) {

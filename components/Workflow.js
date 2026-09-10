@@ -103,8 +103,10 @@ export default function Workflow() {
             <div key={s.step} className={styles.stepWrap}>
               <div className={styles.step}>
                 <div className={styles.stepCard}>
-                  <div className={styles.stepNumber}>Step {s.step}</div>
-                  <span className={styles.stepIcon}>{s.iconSvg}</span>
+                  <div className={styles.stepHeader}>
+                    <span className={styles.stepBadge}>STEP 0{s.step}</span>
+                    <span className={styles.stepIconWrap}>{s.iconSvg}</span>
+                  </div>
                   <h3 className={styles.stepTitle}>{s.title}</h3>
                   <p className={styles.stepDesc}>{s.desc}</p>
                 </div>
