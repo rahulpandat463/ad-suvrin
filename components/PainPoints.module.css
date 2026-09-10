@@ -36,28 +36,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
-  transition: all 0.25s ease;
 }
-
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #DC2626 0%, #F59E0B 100%);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
-  border-color: #94A3B8;
-}
-
-.card:hover::before { opacity: 1; }
 
 .cardTop {
   display: flex;
@@ -142,4 +121,3 @@
   .card { padding: 16px 14px; gap: 10px; }
   .impact { font-size: 0.72rem; }
 }
-

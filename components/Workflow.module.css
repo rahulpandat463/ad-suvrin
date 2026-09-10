@@ -59,14 +59,7 @@
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  transition: all 0.25s ease;
   box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
-}
-
-.stepCard:hover {
-  border-color: #0284C7;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(15, 60, 126, 0.1);
 }
 
 .stepHeader {
@@ -165,4 +158,3 @@
 @media (max-width: 360px) {
   .stepCard { padding: 14px 12px; }
 }
-

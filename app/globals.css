@@ -182,7 +182,7 @@ button {
   gap: 8px;
   padding: 14px 28px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #0F3C7E 0%, #0284C7 100%);
+  background: #0284C7;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 0.95rem;
@@ -190,13 +190,13 @@ button {
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(15, 60, 126, 0.28);
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.4);
-  background: linear-gradient(135deg, #0A2552 0%, #0369A1 100%);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.5);
+  background: #0369A1;
 }
 
 .btn-secondary {
@@ -229,7 +229,7 @@ button {
   gap: 8px;
   padding: 14px 24px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  background: #25D366;
   color: #ffffff;
   font-weight: 700;
   font-size: 0.95rem;
@@ -237,12 +237,13 @@ button {
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
 }
 
 .btn-whatsapp:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+  background: #20BA5A;
 }
 
 @media (max-width: 600px) {
@@ -294,13 +295,6 @@ button {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
-  transition: all var(--transition);
-}
-
-.glass-card:hover {
-  border-color: #BAE6FD;
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-4px);
 }
 
 /* Light dot pattern background matching Suvrin Sapphire/Cyan theme */

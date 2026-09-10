@@ -28,32 +28,9 @@
   gap: 10px;
   position: relative;
   overflow: hidden;
-  transition: all 0.25s;
   cursor: default;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
-
-.card::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: #D97706;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  transform-origin: left;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #D97706;
-  background: #FFFFFF;
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
-}
-
-.card:hover::before { transform: scaleX(1); }
 
 .cardIcon {
   font-size: 1.75rem;
@@ -92,4 +69,3 @@
 @media (max-width: 440px) {
   .grid { grid-template-columns: 1fr; }
 }
-

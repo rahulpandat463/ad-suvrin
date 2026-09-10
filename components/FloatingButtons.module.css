@@ -9,114 +9,104 @@
   z-index: 1000;
 }
 
-/* Shared pill style */
+/* Shared circular style for icon-only floating buttons */
 .fabConsultation,
 .fabWhatsApp {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-family: var(--font-body, 'Inter', sans-serif);
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  min-height: 52px;
+  border-radius: 50%;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-  white-space: nowrap;
-  letter-spacing: 0.01em;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, opacity 0.2s ease;
+  box-sizing: border-box;
 }
 
 .fabConsultation:hover,
 .fabWhatsApp:hover {
-  transform: translateY(-2px);
-  opacity: 0.93;
+  transform: translateY(-3px) scale(1.05);
+  opacity: 0.95;
 }
 
 /* Consultation — Navy blue (brand primary) */
 .fabConsultation {
   background: #0F3C7E;
   color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(15, 60, 126, 0.35);
+  box-shadow: 0 4px 18px rgba(15, 60, 126, 0.4);
 }
 
 .fabConsultation:hover {
-  box-shadow: 0 6px 20px rgba(15, 60, 126, 0.5);
+  box-shadow: 0 8px 24px rgba(15, 60, 126, 0.55);
 }
 
 /* WhatsApp — official green */
 .fabWhatsApp {
   background: #25D366;
   color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
 }
 
 .fabWhatsApp:hover {
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
 }
 
-/* Icon sizing is controlled inline via SVG props */
+/* Icon centering */
 .fabConsultation svg,
 .fabWhatsApp svg {
+  display: block;
   flex-shrink: 0;
 }
 
-/* Responsive: smaller padding on tablet */
+/* Tablet */
 @media (max-width: 768px) {
   .fabContainer {
-    bottom: 16px;
-    right: 16px;
+    bottom: 18px;
+    right: 18px;
     gap: 10px;
   }
   .fabConsultation,
   .fabWhatsApp {
-    padding: 10px 16px;
-    font-size: 0.8rem;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
   }
 }
 
-/* Responsive: compact icon-only circular buttons on mobile — ek ke upar ek */
+/* Mobile */
 @media (max-width: 540px) {
   .fabContainer {
     bottom: 14px;
-    right: 12px;
-    flex-direction: column;
+    right: 14px;
     gap: 8px;
     z-index: 990;
   }
 
-  .fabConsultation span,
-  .fabWhatsApp span {
-    display: none;
-  }
-
   .fabConsultation,
   .fabWhatsApp {
-    padding: 10px;
-    border-radius: 50%;
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    min-height: 42px;
-    justify-content: center;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
   }
 }
 
 @media (max-width: 360px) {
   .fabContainer {
     bottom: 10px;
-    right: 8px;
+    right: 10px;
     gap: 6px;
   }
   .fabConsultation,
   .fabWhatsApp {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-    min-height: 38px;
-    padding: 8px;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
   }
 }
-

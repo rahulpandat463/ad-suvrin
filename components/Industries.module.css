@@ -23,18 +23,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: all 0.25s;
   cursor: default;
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-}
-
-.card:hover {
-  border-color: #D97706;
-  background: #FFFFFF;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
 }
 
 .icon {
@@ -67,4 +59,3 @@
   .grid { grid-template-columns: 1fr; gap: 14px; }
   .card { padding: 18px 16px; border-radius: 12px; }
 }
-
