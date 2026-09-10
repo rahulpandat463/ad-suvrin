@@ -1,13 +1,342 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap');
-
 /* =====================================================
-   DESIGN TOKENS
+   SUVRIN BRAND DESIGN TOKENS — MATCHED TO LOGO PALETTE
+   Logo Palette: 
+   - Deep Sapphire Navy: #0F3C7E
+   - Vibrant Cyan Blue: #0284C7
+   - Emerald Tech Green: #059669
    ===================================================== */
 :root {
-  --color-bg: #050811;
-  --color-surface: #0b1120;
-  --color-surface-2: #111827;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-glow: rgba(245, 158, 11, 0.3);
+  --color-bg: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-surface-2: #F0F9FF;
+  --color-border: #E2E8F0;
+  --color-border-glow: #0284C7;
 
-  --color-primary:
+  --color-primary: #0F3C7E;
+  --color-primary-dim: #0A2552;
+  --color-primary-glow: rgba(15, 60, 126, 0.12);
+
+  --color-accent: #0284C7;
+  --color-accent-glow: rgba(2, 132, 199, 0.12);
+
+  --color-success: #059669;
+  --color-danger: #DC2626;
+  --color-warning: #D97706;
+
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748B;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-glow: 0 0 30px rgba(2, 132, 199, 0.15);
+  --shadow-card: 0 4px 20px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  --shadow-card-hover: 0 16px 32px rgba(15, 60, 126, 0.12), 0 4px 8px rgba(15, 23, 42, 0.04);
+
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================================
+   RESET & BASE — ZERO HORIZONTAL OVERFLOW
+   ===================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  min-width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main, section, header, footer, nav, article, aside {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+p, span, a, li, label, strong, button, input, select, textarea {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, svg, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+
+/* =====================================================
+   UTILITY CLASSES & BRAND BUTTONS
+   ===================================================== */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section-sm {
+  padding: 64px 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid #BAE6FD;
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0284C7;
+  animation: pulse 2s infinite;
+}
+
+.badge-dot-green {
+  background: var(--color-success);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #0F3C7E 0%, #0284C7 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(15, 60, 126, 0.28);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(2, 132, 199, 0.4);
+  background: linear-gradient(135deg, #0A2552 0%, #0369A1 100%);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  color: #0F3C7E;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+  border: 1px solid #BFDBFE;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(15, 60, 126, 0.06);
+}
+
+.btn-secondary:hover {
+  border-color: #0F3C7E;
+  color: #0F3C7E;
+  background: #EFF6FF;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+@media (max-width: 600px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-whatsapp {
+    white-space: normal;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.section-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.section-title span {
+  color: var(--color-primary);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.glass-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition);
+}
+
+.glass-card:hover {
+  border-color: #BAE6FD;
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+/* Light dot pattern background matching Suvrin Sapphire/Cyan theme */
+.grid-bg {
+  background-color: #FFFFFF;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(2, 132, 199, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(15, 60, 126, 0.04) 0%, transparent 40%),
+    linear-gradient(#E2E8F0 1px, transparent 1px),
+    linear-gradient(90deg, #E2E8F0 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #0284C7;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .section-sm { padding: 40px 0; }
+  .container { padding: 0 16px; }
+  .btn-primary, .btn-secondary, .btn-whatsapp { padding: 12px 20px; font-size: 0.875rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 48px 0; }
+  .section-sm { padding: 32px 0; }
+  .container { padding: 0 12px; }
+  .btn-primary, .btn-secondary, .btn-whatsapp { padding: 11px 16px; font-size: 0.85rem; }
+}
+
+@media (max-width: 360px) {
+  .container { padding: 0 10px; }
+}

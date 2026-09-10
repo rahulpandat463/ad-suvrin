@@ -1,0 +1,119 @@
+/* Floating Action Button container — bottom right */
+.fabContainer {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+/* Shared pill style */
+.fabConsultation,
+.fabWhatsApp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.fabConsultation:hover,
+.fabWhatsApp:hover {
+  transform: translateY(-2px);
+  opacity: 0.93;
+}
+
+/* Consultation — Navy blue (brand primary) */
+.fabConsultation {
+  background: #0F3C7E;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(15, 60, 126, 0.35);
+}
+
+.fabConsultation:hover {
+  box-shadow: 0 6px 20px rgba(15, 60, 126, 0.5);
+}
+
+/* WhatsApp — official green */
+.fabWhatsApp {
+  background: #25D366;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+}
+
+.fabWhatsApp:hover {
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Icon sizing is controlled inline via SVG props */
+.fabConsultation svg,
+.fabWhatsApp svg {
+  flex-shrink: 0;
+}
+
+/* Responsive: smaller padding on tablet */
+@media (max-width: 768px) {
+  .fabContainer {
+    bottom: 16px;
+    right: 16px;
+    gap: 10px;
+  }
+  .fabConsultation,
+  .fabWhatsApp {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive: compact icon-only circular buttons on mobile */
+@media (max-width: 540px) {
+  .fabContainer {
+    bottom: 16px;
+    right: 12px;
+    gap: 8px;
+  }
+
+  .fabConsultation span,
+  .fabWhatsApp span {
+    display: none;
+  }
+
+  .fabConsultation,
+  .fabWhatsApp {
+    padding: 12px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 360px) {
+  .fabContainer {
+    bottom: 12px;
+    right: 8px;
+  }
+  .fabConsultation,
+  .fabWhatsApp {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 10px;
+  }
+}
+

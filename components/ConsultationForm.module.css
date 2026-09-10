@@ -1,0 +1,370 @@
+.section {
+  background: #F8FAFC;
+  position: relative;
+  padding: 96px 0;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.title span {
+  color: #D97706;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bullet {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.bulletIcon {
+  font-size: 1.2rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.bullet p {
+  font-size: 0.9rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.waRow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.waLabel {
+  font-size: 0.82rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+/* Right — Form Card Light Mode */
+.right {}
+
+.formCard {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.formHeader {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.formTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.formSub {
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+.formMeta {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #D97706;
+  display: inline-block;
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.stepDot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepDot span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: 2px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #64748B;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+
+.stepActive span {
+  background: #D97706;
+  border-color: #D97706;
+  color: #FFFFFF;
+}
+
+.stepDot label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748B;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.stepActive label { color: #0F172A; }
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: #E2E8F0;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.9rem;
+  color: #0F172A;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #D97706;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+.field select option {
+  background: #FFFFFF;
+  color: #0F172A;
+}
+
+.field textarea { resize: none; }
+
+.field input::placeholder,
+.field textarea::placeholder { color: #94A3B8; }
+
+.phoneRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.phonePrefix {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  padding: 11px 12px;
+  font-size: 0.9rem;
+  color: #334155;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.phoneRow input {
+  border-radius: 0 10px 10px 0;
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.formNote {
+  font-size: 0.78rem;
+  color: #64748B;
+  line-height: 1.5;
+}
+
+.challenges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.challengeBtn {
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #CBD5E1;
+  background: #F8FAFC;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Outfit', sans-serif;
+}
+
+.challengeBtn:hover {
+  border-color: #D97706;
+  color: #B45309;
+}
+
+.challengeActive {
+  background: #FEF3C7 !important;
+  border-color: #FDE68A !important;
+  color: #B45309 !important;
+  font-weight: 700 !important;
+}
+
+.submitBtn {
+  width: 100%;
+  justify-content: center;
+  padding: 14px !important;
+  font-size: 0.95rem !important;
+}
+
+.btnRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
+.privacy {
+  font-size: 0.75rem;
+  color: #64748B;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Success state */
+.successCard {
+  background: #F0FDF4;
+  border: 1px solid #86EFAC;
+  border-radius: 20px;
+  padding: 48px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.successIcon { font-size: 3rem; }
+
+.successCard h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #064E3B;
+}
+
+.successCard p {
+  font-size: 0.95rem;
+  color: #047857;
+  max-width: 360px;
+  line-height: 1.7;
+}
+
+.successContact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #059669;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 520px) {
+  .stepDot label { display: none; }
+  .steps { gap: 6px; }
+}
+
+@media (max-width: 480px) {
+  .formRow { grid-template-columns: 1fr; }
+  .formCard { padding: 20px; }
+  .btnRow { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 380px) {
+  .formCard { padding: 14px; border-radius: 14px; }
+  .steps { gap: 4px; }
+  .section { padding: 64px 0; }
+  .title { font-size: 1.4rem; }
+}
+

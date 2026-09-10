@@ -1,0 +1,385 @@
+.section {
+  background: #FFFFFF;
+  padding: 96px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.header .section-subtitle { margin: 0 auto; }
+
+.dashGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* KPI Section */
+.kpiSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kpiHeader {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+.kpiCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.kpiCard {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+}
+
+.kpiNum {
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.03em;
+  transition: all 0.1s;
+  color: #0F172A;
+}
+
+.kpiLabel {
+  font-size: 0.78rem;
+  color: #64748B;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.kpiDelta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 6px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: #FEF3C7;
+  color: #92400E;
+  display: inline-block;
+}
+
+/* Chart */
+.chartCard {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0F172A;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chartBadge {
+  font-size: 0.72rem;
+  color: #059669;
+  background: #DCFCE7;
+  border: 1px solid #86EFAC;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.chartBars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 100px;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.barGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.barStack {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 90px;
+}
+
+.barPlan {
+  width: 14px;
+  border-radius: 4px 4px 0 0;
+  background: #CBD5E1;
+  transition: height 1s ease;
+}
+
+.barActual {
+  width: 14px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, #F59E0B, #D97706);
+  transition: height 1.2s ease;
+}
+
+.barLabel {
+  font-size: 0.72rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.chartLegend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.75rem;
+  color: #64748B;
+  padding-top: 12px;
+  border-top: 1px solid #E2E8F0;
+  flex-wrap: wrap;
+}
+
+.legendDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.chartPeak {
+  margin-left: auto;
+  color: #D97706;
+  font-weight: 700;
+}
+
+/* Right panel */
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Cost card */
+.costCard {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.costHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0F172A;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.absorbBadge {
+  font-size: 0.72rem;
+  color: #B45309;
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.costSub {
+  font-size: 0.75rem;
+  color: #64748B;
+  margin-top: -8px;
+}
+
+.costRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.costInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 130px;
+}
+
+.costLabel {
+  font-size: 0.78rem;
+  color: #1E293B;
+  font-weight: 600;
+}
+
+.costAmt {
+  font-size: 0.7rem;
+  color: #64748B;
+}
+
+.costBarWrap {
+  flex: 1;
+  height: 7px;
+  background: #E2E8F0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.costBar {
+  height: 100%;
+  width: var(--w, 0%);
+  border-radius: 4px;
+  animation: growBar 1.5s ease forwards;
+}
+
+@keyframes growBar {
+  from { width: 0%; }
+  to { width: var(--w); }
+}
+
+.costPct {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #0F172A;
+  min-width: 38px;
+  text-align: right;
+}
+
+.marginBadge {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #059669;
+  background: #DCFCE7;
+  border: 1px solid #86EFAC;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+/* MES Card */
+.mesCard {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.mesHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.mesDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #059669;
+  animation: pulse 1.5s infinite;
+}
+
+.wcRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wcInfo {
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.wcName {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.wcStatus {
+  font-size: 0.68rem;
+  color: #64748B;
+}
+
+.wcBarWrap {
+  flex: 1;
+  height: 7px;
+  background: #E2E8F0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.wcBar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.wcPct {
+  font-size: 0.75rem;
+  font-weight: 800;
+  min-width: 32px;
+  text-align: right;
+  color: #0F172A;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@media (max-width: 900px) {
+  .dashGrid { grid-template-columns: 1fr; }
+  .kpiCards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .kpiCards { grid-template-columns: 1fr; }
+  .kpiNum { font-size: 1.4rem; }
+  .chartCard, .costCard, .mesCard { padding: 16px; border-radius: 14px; }
+  .costInfo { min-width: 80px; }
+  .wcInfo { min-width: 80px; }
+}
+
+@media (max-width: 400px) {
+  .costRow, .wcRow { gap: 6px; }
+  .costInfo { min-width: 65px; }
+  .wcInfo { min-width: 65px; }
+  .costLabel, .wcName { font-size: 0.72rem; }
+  .costAmt, .wcStatus { font-size: 0.65rem; }
+  .section { padding: 48px 0; }
+}
+

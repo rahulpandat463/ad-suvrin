@@ -1,0 +1,129 @@
+.section {
+  background: #F8FAFC;
+  padding: 96px 0;
+  border-top: 1px solid #E2E8F0;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.locationRow {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.locItem {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.locIcon {
+  font-size: 1.25rem;
+  margin-top: 2px;
+}
+
+.locItem strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.locItem p {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-top: 2px;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.featureCard {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.25s;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.featureCard:hover {
+  border-color: #D97706;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.featureTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featureIcon {
+  font-size: 1.4rem;
+}
+
+.featureTag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #B45309;
+  padding: 4px 10px;
+  border-radius: 50px;
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+}
+
+.featureTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.featureDesc {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .left { position: static; }
+}
+
+@media (max-width: 600px) {
+  .section { padding: 48px 0; }
+  .right { grid-template-columns: 1fr; gap: 12px; }
+  .featureCard { padding: 16px; border-radius: 12px; }
+}
+
+@media (max-width: 420px) {
+  .featureTitle { font-size: 0.88rem; }
+  .featureDesc { font-size: 0.8rem; }
+}
+
